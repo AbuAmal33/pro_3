@@ -9,7 +9,7 @@ function Users(props) {
         <div className={'users'}>
             <ul>
                 {users.map(user => {
-                    return <User user={user} />
+                    return <User user={user} key={user.id} />
                 })}
             </ul>
         </div>

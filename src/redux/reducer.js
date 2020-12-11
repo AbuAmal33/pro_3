@@ -22,6 +22,12 @@ export default (state= initialState, action) => {
                 loadingUsers: false
             }
 
+        case 'users/select':
+            return {
+                ...state,
+                selectedUserId: action.payload
+            }
+
         case 'todos/load/start':
             return {
                 ...state,
@@ -33,7 +39,11 @@ export default (state= initialState, action) => {
                 todos: action.payload,
                 loadingTodos: false
             }
-
+        case 'filter/set':
+            return {
+                ...state,
+                filter: action.payload
+            }
 
         default:
             return state;

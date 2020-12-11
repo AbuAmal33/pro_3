@@ -1,3 +1,7 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 .container {
     width: 1100px;
     margin: 0 auto;
@@ -8,26 +12,55 @@
     width: 300px;
 }
 
-.users ul {
+.todos {
+    width: 100%;
+}
+
+.users ul, .todos ul{
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-.users ul li {
+.users ul li, .todos ul li{
     margin: 0;
-    padding: 0;
+    padding: 10px;
     border-bottom: 1px solid aliceblue;
     margin-bottom: 10px;
-    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.users ul li:hover {
+    background-color: aliceblue;
 }
 
 .user_name {
-    font-size: 10px;
+    font-size: 16px;
     font-weight:  bold;
 }
 
 .user_email {
-    font-size: 16px;
+    font-size: 12px;
     color: gray;
+}
+
+.todos ul li {
+    cursor: text;
+}
+
+.no-user-select {
+    font-size: 20px;
+    align-self: center;
+    text-align: center;
+    flex: 1;
+}
+
+.filter {
+    margin-bottom: 15px;
+}
+
+.filter input{
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
 }
